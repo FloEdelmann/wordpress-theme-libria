@@ -15,7 +15,7 @@ jobs:
       env:
         user: ftp233472-2703260
         host: foerderverein-gbv.de
-        directory: /hp/ab/ah/xq/www/wordpress/wp-content/themes/wordpress-theme-libria-test/
+        directory: /hp/ab/ah/xq/www/wordpress/wp-content/themes/wordpress-theme-libria/
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
