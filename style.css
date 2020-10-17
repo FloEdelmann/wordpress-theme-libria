@@ -1,0 +1,744 @@
+/*
+Theme Name: Libria
+Theme URI: -
+Description: Design für die Förderer und Freunde der Gemeindebücherei Vaterstetten e.V.
+Author: Florian Edelmann
+Author URI: http://www.duran2.de
+Version: 1.1
+*/
+
+
+
+@font-face {
+  font-family: 'Average Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Average Sans Regular'), local('AverageSans-Regular'), local('Average Sans'), url(fonts/Average_Sans/AverageSans-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fjord One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fjord One'), local('Fjord-One'), url(fonts/Fjord_One/FjordOne-Regular.ttf) format('truetype');
+}
+
+
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font: 12pt/1.8em "Average Sans", sans-serif;
+  color: #333;
+}
+
+body {
+  background: #ffebb1 url(lorem.png);
+}
+
+section, article, aside, footer, header, nav, content {
+  display: block;
+}
+
+#panorama {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: #fff url(header.png) no-repeat bottom center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  transition: height 0.2s;
+}
+
+#main {
+  position: relative;
+  background: #fffdf5;
+  width: 90%;
+  max-width: 1100px;
+  margin: 230px auto 0;
+  padding: 0;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3);
+  transition: margin 0.2s;
+  font-size: 12pt;
+  line-height: 1.8em;
+}
+
+#main header {
+  background: #cd8000;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  overflow: visible;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#main header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  overflow: visible;
+  transition: font-size 0.2s;
+}
+#main header h1 a {
+  position: relative;
+  display: block;
+  padding: 10px 10px 0 220px;
+  color: inherit;
+  text-decoration: none;
+  overflow: visible;
+  transition: padding 0.2;
+}
+#main header h1 a:hover,
+#main header h1 a:focus,
+#main header h1 a:active {
+  outline: 0;
+}
+#main header h1 img {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 3px;
+  z-index: 200;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#main header h1 a:hover img,
+#main header h1 a:focus img,
+#main header h1 a:active img {
+  box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* content */
+content {
+  padding-bottom: 20px;
+}
+.has-sidebar content {
+  width: 70%;
+  float: left;
+}
+content article {
+  padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.4em;
+  padding: 8px 0 0.4em;
+  margin: 0;
+  overflow: hidden;
+}
+h1 {
+  font-size: 2.4em;
+}
+content > h1 {
+  padding: 18px 10px 0;
+}
+content > form {
+  padding: 10px;
+}
+h2 {
+  font-size: 1.9em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1.2em;
+  font-style: italic;
+  padding: 0.7em 0;
+}
+h6 {
+  font-size: 1.0em;
+  padding: 0.8em 0;
+}
+
+p, li, td, article div {
+  font-family: "Fjord One", serif;
+}
+
+p, li {
+  margin: 0 0 0.6em;
+}
+
+td, th {
+  padding: 4px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #eee;
+}
+
+table.border {
+  border-collapse: collapse;
+}
+table.border td,
+table.border th {
+  border: 1px solid #aaa;
+}
+
+table.full-width {
+  width: 100%;
+}
+
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+/*.entry-content a {
+  max-width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}*/
+
+
+/* menu */
+#main header ul {
+  list-style: none;
+  padding: 0 10px;
+  margin: 10px 0 0;
+}
+#main header ul li {
+  display: inline;
+}
+#main header ul a {
+  display: inline-block;
+  padding: 10px 2ex 5px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-width: 0 4px 5px;
+  border-style: solid;
+  border-color: transparent;
+  font-family: "Average Sans", sans-serif;
+  transition: background 0.2s;
+}
+#main header ul a:hover,
+#main header ul a:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+#main header ul .current_page_item a {
+  border-bottom-color: #fff;
+}
+
+#navigation-toggle,
+#main header label {
+  display: none;
+}
+
+
+/* sidebar */
+#sidebar {
+  position: relative;
+  float: right;
+  width: 30%;
+  z-index: 100;
+  color: #888;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+.widget {
+  padding: 0 10px 5px;
+  border-left: 2px solid #ffebb1;
+}
+.widget_search {
+  padding-top: 8px;
+}
+.widgettitle {
+  font-size: 1.3em;
+}
+.widget ul {
+  list-style-position: inside;
+  padding: 0;
+}
+.widget ul,
+.widget select,
+.widget div {
+  margin: 0;
+}
+.widget li {
+  margin-bottom: 0;
+}
+.widget_subpages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget_subpages ul ul ul {
+  padding-left: 2ex;
+  font-size: 0.9em;
+  margin: 0 0 2px;
+}
+.widget_subpages a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid #057D9F;
+}
+.widget_subpages a:hover,
+.widget_subpages a:focus,
+.widget_subpages a:active {
+  text-decoration: none;
+  border-color: #025269;
+  color: #025269;
+}
+.widget_subpages .current_page_item>a,
+.widget_subpages>ul>li.current_page_item>a {
+  background: #057D9F;
+  color: #fff;
+}
+
+.widget_search form {
+  position: relative;
+}
+#sidebar .widget_search input {
+  margin: 0;
+  padding: 4px 28px 4px 4px;
+  width: 100%;
+}
+.widget_search button,
+.widget_search button:hover,
+.widget_search button:focus,
+.widget_search button:active {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  width: 24px;
+  height: 24px;
+  height: calc(1.4em + 8px);
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: 0.6;
+}
+.widget_search button:hover,
+.widget_search button:focus,
+.widget_search button:active {
+  opacity: 1;
+}
+.widget_search button span {
+  display: inline-block;
+  background: url(sprites.png) no-repeat -17px -33px;
+  width: 18px;
+  height: 18px;
+  text-indent: 30px;
+}
+
+.widget_libria_subpages ul {
+  list-style: none;
+  padding: 0;
+}
+.widget_libria_subpages ul ul {
+  padding-left: 10px;
+}
+.widget_libria_subpages li.current_page_item > a {
+  font-weight: bold;
+}
+
+
+/* footer */
+footer {
+  line-height: 2em;
+  margin: 0 10px;
+  border-top: 2px solid #ffebb1;
+  padding: 0;
+  text-align: center;
+  font-size: 90%;
+}
+footer .sep {
+  color: #aaa;
+}
+
+
+
+/* links & image links */
+a:link,
+a:visited {
+  color: #057D9F;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  outline: 0;
+}
+content a img {
+  box-sizing: border-box;
+  border: 5px solid #5FB3CB;
+  -moz-transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+a:hover img,
+a:focus img,
+a:active img {
+  border-color: #057D9F;
+}
+a.moretag {
+  white-space: nowrap;
+}
+a.post-edit-link,
+.entry-title a.post-edit-link {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 4px;
+  background: #5FB3CB;
+  color: #FFF;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+a.post-edit-link:hover,
+a.post-edit-link:focus,
+a.post-edit-link:active,
+.entry-title a.post-edit-link:hover,
+.entry-title a.post-edit-link:focus,
+.entry-title a.post-edit-link:active {
+  text-decoration: none;
+  background: #057D9F;
+}
+
+/* link icons */
+a[href*="facebook.com"]::before,
+a[href*="twitter.com"]::before,
+a[href*="plus.google.com"]::before,
+a[href$=".pdf"]::before,
+a[href^="mailto:"]::before,
+a[href^="tel:"]::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url("sprites.png") repeat 0 0;
+  vertical-align: middle;
+  margin: 0 0.5ex;
+  color: #fff;
+}
+a[href*="facebook.com"]::before {
+  background-position: -52px -34px;
+}
+a[href*="twitter.com"]::before {
+  background-position: -70px -34px;
+}
+a[href*="plus.google.com"]::before {
+  background-position: -88px -34px;
+}
+a[href$=".pdf"]::before {
+  background-position: -106px -34px;
+}
+a[href^="mailto:"]::before {
+  background-position: -124px -34px;
+}
+a[href^="tel:"]::before {
+  background-position: -142px -34px;
+}
+#sidebar a[href*="facebook.com"]::before,
+#sidebar a[href*="twitter.com"]::before,
+#sidebar a[href*="plus.google.com"]::before,
+#sidebar a[href$=".pdf"]::before,
+#sidebar a[href^="mailto:"]::before,
+#sidebar a[href^="tel:"]::before {
+  height: 32px;
+  width: 32px;
+  margin: 2px 1ex 2px 0;
+}
+#sidebar a[href*="facebook.com"]::before {
+  background-position: -102px 0;
+}
+#sidebar a[href*="twitter.com"]::before {
+  background-position: -136px 0;
+}
+#sidebar a[href*="plus.google.com"]::before {
+  background-position: -170px 0;
+}
+#sidebar a[href$=".pdf"]::before {
+  background-position: -204px 0;
+}
+#sidebar a[href^="mailto:"]::before {
+  background-position: -238px 0;
+}
+#sidebar a[href^="tel:"]::before {
+  background-position: -272px 0;
+}
+a[href].noicon::before,
+#sidebar a[href].noicon::before,
+.shariff a[href]::before,
+#sidebar .shariff a[href]::before {
+  display: none;
+}
+
+
+/* inputs */
+/* types: text, search, email, color, date, datetime, time, month, number, password, url, tel, week */
+
+content input[type=text], content input[type=search], content input[type=email], 
+content input[type=color], content input[type=date], content input[type=datetime],
+content input[type=time], content input[type=month], content input[type=number], 
+content input[type=password], content input[type=url], content input[type=tel],
+content input[type=week], content textarea, .widget_search input {
+  padding: 3px;
+  margin: 2px;
+  border: 0;
+  border-bottom: 2px solid #ffebb1;
+  box-sizing: border-box;
+  font: 1em/1.4em "Average Sans", sans-serif;
+  background: none;
+  transition: border-color 0.2s;
+}
+content input[type=text]:focus, content input[type=search]:focus, content input[type=email]:focus, 
+content input[type=color]:focus, content input[type=date]:focus, content input[type=datetime]:focus,
+content input[type=time]:focus, content input[type=month]:focus, content input[type=number]:focus, 
+content input[type=password]:focus, content input[type=url]:focus, content input[type=tel]:focus,
+content input[type=week]:focus, content textarea:focus, .widget_search input:focus {
+  border-color: #cd8000;
+  outline: 0;
+}
+content textarea {
+  resize: vertical;
+}
+
+
+/* buttons */
+a.button,
+input[type=button],
+input[type=submit],
+button {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  
+  overflow: visible; /* ie6/7 width fix */
+  width: auto; /* ie6/7 width fix */
+  
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 85%;
+  background: #CD8000;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 3px;
+  vertical-align: middle;
+  margin: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  transition: color 0.2s, box-shadow 0.2s;
+}
+a.button:hover, a.button:focus, a.button:active,
+input[type=button]:hover, input[type=button]:focus, input[type=button]:active,
+input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active,
+button:hover, button:focus, button:active {
+  /*background: #B37000;*/
+  color: #fff;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.35);
+  
+}
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+}
+a.button:active,
+input[type=button]:active,
+input[type=submit]:active,
+button:active {
+  position: relative;
+  top: 1px;
+  background: #BE7600;
+}
+
+.shariff {
+  margin: 5ex 0 0;
+  clear: both;
+}
+
+/* posts and pages */
+.entry-title a {
+  color: #057D9F;
+  text-decoration: none;
+}
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-title a:active {
+  text-decoration: underline;
+}
+.entry-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin: -10px 0px 10px;
+}
+.entry-meta-below {
+  margin-top: 5ex;
+  clear: both;
+}
+.entry-content {
+  line-height: 1.7em;
+}
+.entry-content .thumbnail {
+  float: left;
+  margin: 5px 15px 15px 5px;
+}
+.hentry {
+  clear: left;
+}
+#nav-below {
+  color: #555;
+  font-size: 0.9em;
+  margin-top: 2ex;
+  text-align: center;
+}
+
+
+/* images and captions */
+.wp-caption-text {
+  margin: 0;
+  padding: 4px 5px 2px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+.alignleft, .post-thumbnail img {
+  float: left;
+  margin: 2px 10px 8px 0;
+}
+.alignright {
+  float: right;
+  margin: 2px 0 8px 10px;
+}
+.aligncenter {
+  float: none;
+  margin: 10px auto;
+  display: block;
+}
+.alignleft,
+.aligncenter,
+.alighright {
+  max-width: 100%;
+}
+
+
+
+
+
+/* responsiveness */
+@media all and (max-width: 713px) {
+  /* make panorama image smaller */
+  #panorama {
+    height: 260px;
+  }
+  #main {
+    margin-top: 190px;
+  }
+  
+  /* make logo and title smaller */
+  #main header h1 {
+    font-size: 24px;
+  }
+  #main header h1 img {
+    width: 150px;
+    height: 150px;
+  }
+  #main header h1 a {
+    padding-left: 190px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  /* move sidebar to the bottom */
+  .has-sidebar content,
+  #sidebar {
+    float: none;
+    width: auto;
+  }
+  #sidebar {
+    padding-top: 20px;
+  }
+  .widget {
+    border-left: 0;
+  }
+
+  /* center all images */
+  .alignleft,
+  .alignright,
+  .aligncenter {
+    float: none;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+@media all and (max-width: 579px) {
+  /* hide title */
+  #main header h1 a {
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: -60px 10px 10px;
+    width: 120px;
+    float: left;
+  }
+  #main header h1 img {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  /* also center post thumbnails */
+  .post-thumbnail img {
+    float: none;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* reduce menu padding */
+  #main header .menu {
+    display: none;
+    clear: left;
+  }
+  #main header ul a {
+    padding: 8px 8px 3px;
+    margin: 4px 4px 0 0;
+  }
+
+  /* menu toggle link */
+  #main header label {
+    padding: 10px;
+    line-height: 65px;
+    font-weight: bold;
+    display: inline;
+  }
+  #main header label:after {
+    display: inline-block;
+    content: "";
+    margin-left: 4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 2px 5px;
+    border-color: #fff transparent transparent transparent;
+  }
+  #navigation-toggle:checked + label:after {
+    border-width: 2px 5px 5px 5px;
+    border-color: transparent transparent #fff transparent;
+  }
+  #navigation-toggle:checked + label + .menu,
+  #navigation-toggle:checked ~ .menu {
+    display: block;
+  }
+}
