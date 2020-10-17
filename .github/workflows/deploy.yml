@@ -1,3 +1,5 @@
+# see https://css-tricks.com/continuous-deployments-for-wordpress-using-github-actions/
+
 name: Deployment
 
 on:
