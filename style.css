@@ -416,7 +416,7 @@ a.post-edit-link:active,
 /* link icons */
 a[href*="facebook.com"]::before,
 a[href*="twitter.com"]::before,
-a[href*="plus.google.com"]::before,
+a[href*="instagram.com"]::before,
 a[href$=".pdf"]::before,
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before {
@@ -435,7 +435,7 @@ a[href*="facebook.com"]::before {
 a[href*="twitter.com"]::before {
   background-position: -70px -34px;
 }
-a[href*="plus.google.com"]::before {
+a[href*="instagram.com"]::before {
   background-position: -88px -34px;
 }
 a[href$=".pdf"]::before {
@@ -449,7 +449,7 @@ a[href^="tel:"]::before {
 }
 #sidebar a[href*="facebook.com"]::before,
 #sidebar a[href*="twitter.com"]::before,
-#sidebar a[href*="plus.google.com"]::before,
+#sidebar a[href*="instagram.com"]::before,
 #sidebar a[href$=".pdf"]::before,
 #sidebar a[href^="mailto:"]::before,
 #sidebar a[href^="tel:"]::before {
@@ -463,7 +463,7 @@ a[href^="tel:"]::before {
 #sidebar a[href*="twitter.com"]::before {
   background-position: -136px 0;
 }
-#sidebar a[href*="plus.google.com"]::before {
+#sidebar a[href*="instagram.com"]::before {
   background-position: -170px 0;
 }
 #sidebar a[href$=".pdf"]::before {
