@@ -1,4 +1,4 @@
-# wordpress-theme-libria
+# Wordpress Theme *Libria*
 
 A Wordpress Theme created for the ["Förderer und Freunde der Gemeindebücherei Vaterstetten e.V."](https://www.foerderverein-gbv.de/) association: https://www.foerderverein-gbv.de/
 
